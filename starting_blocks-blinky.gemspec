@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib/starting_blocks-blinky', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'starting_blocks-blinky/version'
+require 'starting_blocks_blinky/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-blinky"
