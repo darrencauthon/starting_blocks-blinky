@@ -1,10 +1,10 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('../lib/starting_blocks_blinky', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'starting_blocks/blinky/version'
+require 'starting_blocks_blinky/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "starting_blocks-blinky"
+  spec.name          = "starting_blocks_blinky"
   spec.version       = StartingBlocks::Blinky::VERSION
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
