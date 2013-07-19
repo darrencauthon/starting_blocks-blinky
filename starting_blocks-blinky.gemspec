@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib/starting_blocks-blinky', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'starting_blocks_blinky/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-blinky"
-  spec.version       = StartingBlocks::Blinky::VERSION
+  spec.version       = '0.0.6'
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
   spec.description   = %q{Turn colors when tests are run.}
