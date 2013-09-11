@@ -1,16 +1,8 @@
 # StartingBlocks::Blinky
 
-TODO: Write a gem description
+Blinky support for Starting Blocks
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'starting_blocks-blinky'
-
-And then execute:
-
-    $ bundle
 
 Or install it yourself as:
 
@@ -18,12 +10,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Install the gem, then type:
 
-## Contributing
+````
+sb --blinky
+````
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Check out [Starting Blocks](https://github.com/darrencauthon/starting_blocks) for more details.
+
+
