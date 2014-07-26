@@ -95,6 +95,17 @@ describe "blinky lighting" do
 
           end
 
+          describe "but no color was provided" do
+
+            before { results[:color] = nil }
+
+            it "should use the old logic that will be removed eventually" do
+              blinky_lighting.expects(:run_the_old_logic_with).with results
+              blinky_lighting.receive_results results
+            end
+
+          end
+
         end
 
       end
