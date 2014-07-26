@@ -34,7 +34,7 @@ module StartingBlocks
       end
 
       def receive_results results
-        return if @spec_count == 0
+        return if @spec_count.to_i == 0
         if results[:color]
           change_color_to results[:color]
         else
