@@ -47,4 +47,65 @@ describe "blinky lighting" do
 
   end
 
+  describe "receiving results" do
+
+    let(:results) { {} }
+
+    describe "no files were received" do
+
+      before do
+        blinky_lighting.receive_files_to_run []
+      end
+
+      it "should do nothing" do
+        light.expects(:success!).never
+        light.expects(:failure!).never
+        light.expects(:building!).never
+
+        blinky_lighting.receive_results results
+          
+      end
+
+    end
+
+    describe "files were received previously" do
+
+      before do
+        blinky_lighting.receive_files_to_run [Object.new]
+      end
+
+      describe "different colored results" do
+
+        [
+          [:green,  :success!],
+          [:red,    :failure!],
+          [:yellow, :building!],
+        ].map { |x| Struct.new(:color, :light_method).new(*x) }.each do |example|
+
+          describe "and the color is #{example.color}" do
+
+            before { results[:color] = example.color }
+
+            it "should call #{example.light_method}" do
+                
+              light.expects example.light_method
+              blinky_lighting.receive_results results
+
+            end
+
+          end
+
+        end
+
+      end
+      describe "and color on the results is green" do
+
+
+
+      end
+
+    end
+
+  end
+
 end
