@@ -35,7 +35,11 @@ module StartingBlocks
 
       def receive_results results
         return if @spec_count == 0
-        run_the_old_logic_with results
+        if results[:color]
+          change_color_to results[:color]
+        else
+          run_the_old_logic_with results
+        end
       end
 
       def run_the_old_logic_with results
