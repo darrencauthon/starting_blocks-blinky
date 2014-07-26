@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-blinky"
-  spec.version       = '0.0.8'
+  spec.version       = '1.0.0'
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
   spec.description   = %q{Turn colors when tests are run.}
