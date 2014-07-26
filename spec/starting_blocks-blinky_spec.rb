@@ -21,4 +21,30 @@ describe "blinky lighting" do
 
   end
 
+  describe "receiving files to run" do
+
+    describe "when there are files to run" do
+
+      let(:files) { [Object.new] }
+
+      it "should change the color to yellow" do
+        light.expects(:building!)
+        blinky_lighting.receive_files_to_run files
+      end
+
+    end
+
+    describe "when there are no files to run" do
+
+      let(:files) { [] }
+
+      it "should do nothing" do
+        light.expects(:building!).never
+        blinky_lighting.receive_files_to_run files
+      end
+
+    end
+
+  end
+
 end
